@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rezonate.decidrr" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.rezonate.decidrr.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.rezonate.decidrr.ProcessingActivity"
+            android:label="@string/title_activity_processing"
+            android:parentActivityName="com.rezonate.decidrr.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rezonate.decidrr.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.rezonate.decidrr.SplashScreen"
+            android:label="@string/title_activity_splash_screen" >
+
+        </activity>
+        <activity
+            android:name="com.rezonate.decidrr.AnswerActivity"
+            android:label="@string/title_activity_answer"
+            android:parentActivityName="com.rezonate.decidrr.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.rezonate.decidrr.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.rezonate.decidrr.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="com.rezonate.decidrr.InitialActivity"
+            android:label="@string/title_activity_initial" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="c20c4af5a6509c93e5e38c14e8654e066c35e177"/>
+        <activity android:name="com.mopub.mobileads.MoPubActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.mobileads.MraidActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.common.MoPubBrowser"
+                  android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize"/>
+    </application>
+
+</manifest>
